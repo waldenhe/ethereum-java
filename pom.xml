@@ -10,7 +10,7 @@
 
 	<name>ethereum</name>
 	<description>区块链客户端</description>
-	
+
 	<repositories>
 		<repository>
 			<url>https://dl.bintray.com/ethereum/maven/</url>
@@ -18,8 +18,8 @@
 			<name>ethereum</name>
 		</repository>
 	</repositories>
-	
-	
+
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -155,12 +155,23 @@
 			<groupId>org.javassist</groupId>
 			<artifactId>javassist</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.slf4j/jcl-over-slf4j -->
+		<!-- log配置：Log4j2 + Slf4j -->
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+		</dependency>
+		<dependency> <!-- 桥接：告诉Slf4j使用Log4j2 -->
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+		</dependency>
+		<dependency> <!-- 桥接：告诉commons logging使用Log4j2 -->
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-jcl</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
