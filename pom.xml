@@ -10,7 +10,16 @@
 
 	<name>ethereum</name>
 	<description>区块链客户端</description>
-
+	
+	<repositories>
+		<repository>
+			<url>https://dl.bintray.com/ethereum/maven/</url>
+			<id>ethereum</id>
+			<name>ethereum</name>
+		</repository>
+	</repositories>
+	
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
